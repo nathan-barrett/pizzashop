@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -9,19 +10,31 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center">Welcome to Peter's Partially Perfect Pizza</h1>
-      <div class ="jumbotron" id="jumboForm" >
+      <h1 class="text-center header-font">Welcome to Peter's Partially Perfect Pizza</h1>
+      <div class ="jumbotron" id="jumboForm justify-content-center" >
         <form id="pizza-time">
           <div class="row"> <!--pizza size row-->
-            <div class="col-md-12">
+            <div class="col-md-10 offset-1">
               <h2 class="text-center">Time to make a pizza pie!</h2>
-              <div class="center-form">
-                <select id="pizza-size">
-                  <option name="selector">Select a size for your pie!</option>
-                  <option value="6">6" - for cool babies only</option>
-                  <option value="12">12" - for all practical pizza purposes</option>
-                  <option value="24">24" - please provide doctors note.</option>
-                </select>
+              <div id="pizzaSize">
+                <div class="form-check form-check-inline radio-display">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="pizza-size" value="6">
+                    6" for all the cool babies.
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="pizza-size" value="12">
+                    12" Peter's favorite size, yours too!
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="pizza-size" value="24">
+                    24" please bring a doctors note.
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -113,8 +126,15 @@
         </form>
       </div>
       <div id="result">
-        <div class="jumbotron" id="jumboResult">
-          <p class="myp">A ticket to <span class="selectedMovie"></span> will cost <span class="priceResult"></span>.</p>
+        <div class="jumbotron hide text-center" id="jumboResult">
+          <h2 class="header-font">Here's your order:</h2>
+          <p class="">Hey customer, it looks like your pizza will cost $<span class="user-pizza-price"></span>.00</p>
+          <!-- <p>Some deatils about your Pizza:</p>
+          <p>Size:<span class="user-pizza-size"></span></p>
+          <p>Toppings: </p>
+          <ul class="user-pizza-toppings in-line">
+
+          </ul> -->
         </div>
       </div>
     </div>

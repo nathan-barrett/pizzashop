@@ -5,7 +5,6 @@ function Pizza(size, veggies, meat, special) {
   this.meat = meat;
   this.special = special;
 }
-var newPizza = new Pizza;
 
 Pizza.prototype.Price = function() {
   return this.size + this.veggies.length + (this.meat.length * 2) + (this.special.length * 3);
@@ -15,12 +14,12 @@ function resetForm() {
   //figure this out
 }
 
-
 //front-end logic//
 $(function() {
   $("form#pizza-time").submit(function(event){
     event.preventDefault();
-    var pizzaSize = parseInt($("select#pizza-size").val());
+    var pizzaSize = parseInt($("input:radio[name=pizza-size]:checked").val());
+    console.log(pizzaSize)
     var veggieTopping = $("input:checkbox[name=topping]:checked").map(function(){
       return $(this).val();
     });
@@ -31,15 +30,14 @@ $(function() {
       return $(this).val();
     });
     var userPizza = new Pizza (pizzaSize, veggieTopping, meatTopping, specialTopping);
-
-    console.log(userPizza.size);
-    console.log(specialTopping.length);
-    console.log(meatTopping.length);
-    console.log(veggieTopping.length);
-    debugger
     outputPrice = userPizza.Price();
-
+    debugger;
     console.log(outputPrice);
+    $(".user-pizza-price").empty();
+    $("#jumboResult").show();
+    $(".user-pizza-price").append(outputPrice);
+
+
 
   });
 });

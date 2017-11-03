@@ -3,3 +3,22 @@
   display: flex;
   margin-bottom: 40px;
 }
+
+.hide {
+  display: none;
+}
+.header-font {
+  font-family: 'Bungee Shade', cursive;
+}
+.radio-display {
+  justify-content: center;
+}
+
+body {
+  background-image: url("shop.jpg");
+}
+
+
+#jumboForm {
+  background: rgba(255, 254, 255, 0.6);
+}
