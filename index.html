@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -10,12 +11,12 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center header-font">Welcome to Peter's Partially Perfect Pizza</h1>
-      <div class ="jumbotron" id="jumboForm justify-content-center" >
+      <h1 class="text-center header-font display-4">Welcome to Peter's Partially Perfect Pizza</h1>
+      <div class ="jumbotron jumbo-form" id="justify-content-center" >
         <form id="pizza-time">
           <div class="row"> <!--pizza size row-->
             <div class="col-md-10 offset-1">
-              <h2 class="text-center">Time to make a pizza pie!</h2>
+              <h2 class="text-center header-font disply-6">Time to make a pizza pie!</h2>
               <div id="pizzaSize">
                 <div class="form-check form-check-inline radio-display">
                   <label class="form-check-label">
@@ -122,12 +123,12 @@
             </div>
           </div>
           <br><br>
-          <center><button type="submit" class="btn btn-warning btn-lg btn-block">Make my Pizza!</button></center>
+          <center><button type="submit" class="btn btn-warning btn-lg btn-block"><span>Make my Pizza!</span></button></center>
         </form>
       </div>
       <div id="result">
         <div class="jumbotron hide text-center" id="jumboResult">
-          <h2 class="header-font">Here's your order:</h2>
+          <h1 class="header-font">Here's your order:</h1>
           <p class="">Hey customer, it looks like your pizza will cost $<span class="user-pizza-price"></span>.00</p>
           <!-- <p>Some deatils about your Pizza:</p>
           <p>Size:<span class="user-pizza-size"></span></p>

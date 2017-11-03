@@ -9,16 +9,56 @@
 }
 .header-font {
   font-family: 'Bungee Shade', cursive;
+  font-weight: bold;
 }
 .radio-display {
   justify-content: center;
+  margin-left: 50px;
 }
 
 body {
   background-image: url("shop.jpg");
+  font-family: 'Nunito', sans-serif;
 }
 
 
-#jumboForm {
-  background: rgba(255, 254, 255, 0.6);
+.jumbo-form, #jumboResult {
+  background: rgba(252, 145, 133, 0.9);
+}
+button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
