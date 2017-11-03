@@ -31,11 +31,12 @@ $(function() {
     });
     var userPizza = new Pizza (pizzaSize, veggieTopping, meatTopping, specialTopping);
     outputPrice = userPizza.Price();
-    debugger;
     console.log(outputPrice);
     $(".user-pizza-price").empty();
     $("#jumboResult").show();
     $(".user-pizza-price").append(outputPrice);
+    $(".user-pizza-size").append(" " + pizzaSize + " inches");
+    $(".user-pizza-toppings").append("<li>" + userPizza.veggies.toString(",  ") + "</li>")
 
 
 
